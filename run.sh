@@ -14,7 +14,7 @@ export FLASK_APP=core/server.py
 if [ -f "core/store.sqlite3" ]; then
     rm core/store.sqlite3
 fi
-flask db upgrade -d core/migrations/ && pytest --cov 
+flask db upgrade -d core/migrations/ && pytest --cov -vvv -s tests/
 # flask db upgrade -d core/migrations/ && pytest -vvv -s tests/
 
 # Run server
