@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  fyle_web:
+    build: .
+    ports:
+      - "7755:7755"
+    volumes:
+      - .:/app
+    command: >
+      sh -c "./run.sh"
